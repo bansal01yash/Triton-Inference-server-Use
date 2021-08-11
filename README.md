@@ -13,6 +13,15 @@ There are 3 main steps involved in the setup.
   $ docker pull nvcr.io/nvidia/tritonserver:<xx.yy>-py3
   ```
   Replace <xx.yy> with the latest release of Triton which can be found [here](https://github.com/triton-inference-server/server#triton-inference-serve).
-  (Testing at the time was done on r21.05 using the command  $ docker pull nvcr.io/nvidia/tritonserver:21.05-py3)
+  
+  Testing at the time was done on r21.05 using the command  
+  
+  ...
+  $ docker pull nvcr.io/nvidia/tritonserver:21.05-py3
+  ...
+
   
 [Here](https://docs.docker.com/engine/install/linux-postinstall/) you can find some post-installation steps for Docker.(These are not mandatory and some are just for convenience)
+
+# Using Triton Inference Server
+
