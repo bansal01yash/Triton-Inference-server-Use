@@ -16,9 +16,9 @@ There are 3 main steps involved in the setup.
   
   Testing at the time was done on r21.05 using the command  
   
-  ...
+  ```
   $ docker pull nvcr.io/nvidia/tritonserver:21.05-py3
-  ...
+  ```
 
   
 [Here](https://docs.docker.com/engine/install/linux-postinstall/) you can find some post-installation steps for Docker.(These are not mandatory and some are just for convenience)
