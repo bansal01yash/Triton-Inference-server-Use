@@ -88,7 +88,7 @@ Use the [dali-backend](https://github.com/triton-inference-server/dali_backend) 
 
 # References
 
-https://github.com/triton-inference-server
-https://github.com/kubeflow/kfserving
+1. https://github.com/triton-inference-server
+2. https://github.com/kubeflow/kfserving
 
 
