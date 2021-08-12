@@ -73,7 +73,7 @@ For example to check unet
 
 ```
 $ curl -v localhost:8000/v2/models/unet/versions/1/ready
-...
+```
 
 
 ## Running Inference on the models
