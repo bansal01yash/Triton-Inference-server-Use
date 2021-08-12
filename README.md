@@ -37,12 +37,58 @@ For unet based on [this](https://github.com/reachsumit/deep-unet-for-satellite-i
 ./unet_setup.sh
 ```
 
-You can read briefly about setting up custom model repositories [here]().
+You can read briefly about setting up custom model repositories [here](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/model-repository.md#setting-up-custom-model-repository).
 
 
 # Using Triton Inference Server
  
 ```
 $ docker run --gpus=1 --rm -p8000:8000 -p8001:8001 -p8002:8002 -v $(pwd)/model_repository:/models nvcr.io/nvidia/tritonserver:21.05-py3 tritonserver --model-repository=/models --strict-model-config=false
+```
+To run without gpus, remove the gpus=1 flag
+For multiple gpus, change the gpus flag to the number of gpus or use gpus=all
+
+All models in the model repository should be loaded with version number and status displayed (STATUS should be ready)
+
+
+## Verify Triton Is Running Correctly
+
+Use Triton’s *ready* endpoint to verify that the server and the models
+are ready for inference. From the host system use curl to access the
+HTTP endpoint that indicates server status.
 
 ```
+$ curl -v localhost:8000/v2/health/ready
+...
+< HTTP/1.1 200 OK
+< Content-Length: 0
+< Content-Type: text/plain
+```
+
+The HTTP request returns status 200 if Triton is ready and non-200 if
+it is not ready.
+
+You can also check the availability of your models as ```v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/ready```
+For example to check unet
+
+```
+$ curl -v localhost:8000/v2/models/unet/versions/1/ready
+...
+
+
+## Running Inference on the models
+
+We can test the inference for the inception model for image classification using the 
+
+You can also refer to [postman.md](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/postman.md#verifying-triton-functionality-using-postman) to use Postman to verify functionality of model inference on Triton.
+
+# Future Work
+
+Use the [dali-backend](https://github.com/triton-inference-server/dali_backend) to implement end-to-end inference on triton itself including image preprocessing, model inference and post-processing of results. 
+
+# References
+
+https://github.com/triton-inference-server
+https://github.com/kubeflow/kfserving
+
+
