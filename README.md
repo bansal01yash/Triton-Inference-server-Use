@@ -1,5 +1,3 @@
-# Triton-Inference-server-Use
-
 # Initial Setup
 
 The easiest way to setup and use Triton Inference Server is using a Docker image.
