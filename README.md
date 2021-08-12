@@ -75,9 +75,10 @@ $ curl -v localhost:8000/v2/models/unet/versions/1/ready
 
 ## Running Inference on the models
 
-We can test the inference for the inception model for image classification using the 
+We can test the inference for the inception model for image classification using our [sample frontend](https://github.com/Taarushthenoob/NESAC_front) for image classification. 
 
-You can also refer to [postman.md](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/postman.md#verifying-triton-functionality-using-postman) to use Postman to verify functionality of model inference on Triton.
+-
+You can also refer to [API_requests.md](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/postman.md#verifying-triton-functionality-using-postman) for example GET and POST requests that are used in the frontend and can also be tested using postman.
 
 # Future Work
 
