@@ -46,7 +46,7 @@ To run without gpus, remove the gpus=1 flag
 For multiple gpus, change the gpus flag to the number of gpus or use gpus=all
 
 All models in the model repository should be loaded with version number and status displayed (STATUS should be ready)
-
+NOTE: It is possible that using $(pwd) may not load all the models, use absolute path of the model_repository folder in that case
 
 ## Verify Triton Is Running Correctly
 
