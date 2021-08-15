@@ -5,9 +5,13 @@ Here are examples of the requests we used in our use of the HTTP/REST and GRPC i
 ## Health:
 
 GET v2/health/live 
-GET v2/health/ready 
+
+GET v2/health/ready
+
 GET v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/ready
+
 Eg localhost:8000/v2/models/inception_graphdef/versions/1/ready
+
 Note: Health requests have shown to not work on Linux except using curl so have been disabled on the example frontend as well
 
 ## Server Metadata:
