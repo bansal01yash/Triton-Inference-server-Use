@@ -82,7 +82,7 @@ You can also refer to [API_requests.md](https://github.com/bansal01yash/Triton-I
 
 # Future Work
 
-Use the [dali-backend](https://github.com/triton-inference-server/dali_backend) to implement end-to-end inference on triton itself including image preprocessing, model inference and post-processing of results. 
+Use the [dali-backend](https://github.com/triton-inference-server/dali_backend) to implement end-to-end inference on triton itself including image preprocessing, model inference and post-processing of results using the feature to have an ensemble of models. An example of the same can be found [here](https://github.com/triton-inference-server/dali_backend/tree/main/docs/examples/inception_ensemble).
 
 # References
 
