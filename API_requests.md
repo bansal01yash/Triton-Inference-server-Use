@@ -47,18 +47,18 @@ POST v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/infer
         "outputs" : [ $request_output, ... ] #optional
     }
 
-POST http://localhost:8000/v2/models/unet/versions/1/infer
+POST localhost:8000/v2/models/unet/versions/1/infer
 
-{   
-    "inputs" : [
-    {
-      "name" : "input_1",
-      "shape" : [1,160,160,8],
-      "datatype" : "FP32",
-      "data" : [{{sample}}]
+    {   
+        "inputs" : [
+        {
+            "name" : "input_1",
+            "shape" : [1,160,160,8],
+            "datatype" : "FP32",
+            "data" : [{{sample}}]
+        }
+      ]
     }
-  ]
-}
 where 'sample' is a an input array of type FP32 and with 160*160*8 elements
 
 More example requests can be found [here](https://github.com/kubeflow/kfserving/blob/master/docs/predict-api/v2/required_api.md#inference-request-examples).
