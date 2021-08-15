@@ -14,7 +14,7 @@ Eg localhost:8000/v2/models/inception_graphdef/versions/1/ready
 
 Note: Health requests have shown to not work on Linux except using curl so have been disabled on the example frontend as well
 
-## Server Metadata:
+    ### Server Metadata:
 
 GET v2
     localhost:8000/v2
