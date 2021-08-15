@@ -59,7 +59,7 @@ POST localhost:8000/v2/models/unet/versions/1/infer
         }
       ]
     }
-where 'sample' is a an input array of type FP32 and with 160*160*8 elements
+where 'sample' is a an input array of type FP32 and with 160\*160\*8 elements
 
 More example requests can be found [here](https://github.com/kubeflow/kfserving/blob/master/docs/predict-api/v2/required_api.md#inference-request-examples).
 [C++ and Python APIs](https://github.com/triton-inference-server/client) can also be used for client side inference
