@@ -10,36 +10,45 @@ GET v2/health/ready
 
 GET v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/ready
 
-Eg localhost:8000/v2/models/inception_graphdef/versions/1/ready
+Eg: GET localhost:8000/v2/models/inception_graphdef/versions/1/ready
 
 Note: Health requests have shown to not work on Linux except using curl so have been disabled on the example frontend as well
 
-    ### Server Metadata:
+
+### Server Metadata:
 
 GET v2
-    localhost:8000/v2
+
+Eg: GET localhost:8000/v2
+
 
 ## Model Metadata:
 
 Provides the input and output configuration, as well as platform. This can be used to view the generated model configuration for the case where a mdoel configuration is not specified [(Auto-Generated Model Configuration)](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/model-setup.md#auto-generated-model-configuration)
+
 GET v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]
-    localhost:8000/v2/models/unet
-    localhost:8000/v2/models/unet/versions/1
-    
+
+Eg: GET localhost:8000/v2/models/unet
+
+   GET localhost:8000/v2/models/unet/versions/1
+   
+   
 ## Inference:
 
 These requests were used for inference in our example frontend [(here)](https://github.com/Taarushthenoob/NESAC_front/blob/main/index.js).
 
 POST v2/models/${MODEL_NAME}[/versions/${MODEL_VERSION}]/infer
-$inference_request =
-{
-  "id" : $string #optional,
-  "parameters" : $parameters #optional,
-  "inputs" : [ $request_input, ... ],
-  "outputs" : [ $request_output, ... ] #optional
-}
+
+    $inference_request =
+    {
+        "id" : $string #optional,
+        "parameters" : $parameters #optional,
+        "inputs" : [ $request_input, ... ],
+        "outputs" : [ $request_output, ... ] #optional
+    }
 
 POST http://localhost:8000/v2/models/unet/versions/1/infer
+
 {   
     "inputs" : [
     {
