@@ -1,4 +1,4 @@
-# Setting up Custom Model Repository
+# Setting up your own model repository
 
 
 ### Auto-Generated Model Configuration
