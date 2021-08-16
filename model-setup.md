@@ -28,10 +28,13 @@ policy](https://github.com/triton-inference-server/server/blob/main/docs/model_c
 
 Model Repository can have various cloud locations as well, details for which can be found [here](https://github.com/triton-inference-server/server/blob/main/docs/model_repository.md#model-repository-locations)
 
-The details for <model-definition-file> can be found [here](https://github.com/triton-inference-server/server/blob/main/docs/model_repository.md#model-files) for various different model files. Triton supports various types of models, following is an example of how to make a TensorFlow saved_model file which supports [Auto Generated Model Configuration]()
+The details for <model-definition-file> can be found [here](https://github.com/triton-inference-server/server/blob/main/docs/model_repository.md#model-files) for various different model files. Triton supports various types of models, following is an example of how to make a TensorFlow saved_model file which supports [Auto Generated Model Configuration](https://github.com/bansal01yash/Triton-Inference-server-Use/blob/main/model-setup.md#auto-generated-model-configuration)
  ```
   tf.saved_model.save(model, model_save_path)
 ```
+  
+## Model Configuration
+  
 ### Auto-Generated Model Configuration
   
 
