@@ -44,9 +44,9 @@ By default, the model configuration file containing the required settings must b
 Specifically, TensorRT, TensorFlow saved-model, and ONNX models do not require a model configuration file because Triton can derive all the required settings automatically. All other model types must provide a model configuration file.
   
 When using --strict-model-config=false you can see the model configuration that was generated for a model by using the model configuration endpoint. The easiest way to do this is to use a utility like curl:
-  
+```
   $ curl localhost:8000/v2/models/<model name>/config
-  
+```  
 Triton only generates the minimal portion of the model configuration. You must still provide the optional portions of the model configuration by editing the config.pbtxt file.
 
 
