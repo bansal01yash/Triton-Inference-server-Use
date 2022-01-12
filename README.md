@@ -3,7 +3,7 @@
 The easiest way to setup and use Triton Inference Server is using a Docker image.
 There are 3 main steps involved in the setup.
 1. Install Docker specific to Operating System from [here](https://docs.docker.com/engine/install/).
-    - Docker can also be isntalled using a [convenience script](https://get.docker.com/). Please read about the potential risks and limitations [here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script). Installation at the time of testing was done using the repository [here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script).   
+    - Docker can also be installed using a [convenience script](https://get.docker.com/). Please read about the potential risks and limitations [here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script). Installation at the time of testing was done using the repository [here](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script).   
 2. Install the NVIDIA Container Toolkit for GPU compatibility from [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)(Not available on Windows)
 3. Pull the latest Triton Docker image using the following command
 
